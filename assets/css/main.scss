@@ -15,8 +15,9 @@ textarea {
   position: relative;
   // sticky footer
   .content {
-    background-color: #c4c3ec;
     min-height: calc(100vh - 50px);
+    display: flex;
+    justify-content: flex-end;
   }
 
   footer {
@@ -31,6 +32,7 @@ textarea {
     max-width: 200px;
     margin: auto 2rem !important;
     position: absolute;
+    left: 0%;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -54,32 +56,96 @@ textarea {
       li {
         text-transform: uppercase;
         cursor: pointer;
-        padding: 0.5rem 1rem;
-        border-radius: 2rem;
+        padding: 0.3rem 1rem 0.3rem 0;
+        border-radius: 2.5rem;
         margin-bottom: 0.8rem;
-        // background-color: $yellow;
-        transition: height 0.5s;
-        -webkit-transition: height 0.5s;
-        transition: 1.5s;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        h4 {
+          display: none;
+          // transition-property: display;
+          // transition-duration: 1s;
+        }
         .icon {
           width: 50px;
           height: 50px;
-          margin-left: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: $secondary;
+          background-color: $primary;
           border-radius: 50%;
+        }
+        &:hover {
+          transition-duration: 0.3s;
+          background-color: $secondary;
+          h4 {
+            display: block;
+          }
+          .icon {
+            background-color: $secondary;
+          }
         }
       }
     }
   }
 
   // page layout
+
+  .page {
+    min-width: calc(100vw - 100px);
+    display: flex;
+  }
+
+  .homepage {
+    position: relative;
+    .content-wrapper {
+      display: flex;
+      width: 100%;
+      padding: 0 1.5rem 0 0;
+      align-items: center;
+      justify-content: space-between;
+      .details {
+        max-width: 50vw;
+        h1 {
+          display: flex;
+          flex-direction: column;
+          text-transform: uppercase;
+          font-size: 51px;
+          line-height: 62px;
+          font-weight: 700;
+          margin: 18px 0 10px;
+          .title-name {
+            color: $yellow;
+          }
+        }
+        p {
+          margin-bottom: 1rem;
+          font-weight: 400;
+        }
+        // position: absolute;
+        // top: 50%;
+        // -ms-transform: translateY(-50%);
+        // transform: translateY(-50%);
+      }
+      .portrait {
+        height: 80vh;
+        width: 30vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+        border-radius: 30px;
+        background-image: url("../my-portrait.jpg");
+      }
+    }
+  }
+
+  .aboutpage {
+  }
 
   .row {
     margin: 30px 0 60px;
@@ -94,20 +160,44 @@ textarea {
   // buttons
 
   button {
-    background: #098191;
-    transition: background ease 0.25s;
-    border-radius: 5px;
+    position: relative;
+    border: 1px solid $secondary;
+    background-color: transparent;
     display: inline-block;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    margin: 0;
+    line-height: 1.4;
+    border-radius: 35px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+    transition: all 0.25s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    z-index: 1;
+    padding: 16px 70px 16px 35px;
+    text-align: center;
+    vertical-align: middle;
     text-decoration: none;
-    color: #ffffff;
+    color: $primary;
     font-size: 1.2rem;
     cursor: pointer;
     text-align: center;
     -webkit-appearance: none;
     -moz-appearance: none;
+    .btn-icon {
+      position: absolute;
+      right: -1px;
+      top: -1px;
+      bottom: 0;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      color: #fff;
+      border-radius: 50%;
+      background-color: $primary;
+    }
   }
 
   button:hover {
@@ -172,11 +262,10 @@ textarea {
   }
 
   footer {
-    background: black;
     width: 100%;
     z-index: 5;
     padding: 10px 30px;
-    color: white;
+    color: $primary;
     text-align: center;
 
     a,

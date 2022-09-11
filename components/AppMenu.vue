@@ -2,20 +2,20 @@
   <nav>
     <ul>
       <li>
-        <h4>Home</h4>
         <div class="icon"><MaterialIconHome /></div>
+        <h4>Home</h4>
       </li>
       <li>
-        <h4>About</h4>
         <div class="icon"><MaterialIconAccount /></div>
+        <h4>About</h4>
       </li>
       <li>
-        <h4>Portfolio</h4>
         <div class="icon"><MaterialIconBriefcaseAccount /></div>
+        <h4>Portfolio</h4>
       </li>
       <li>
-        <h4>Contact</h4>
         <div class="icon"><MaterialIconCardAccountMail /></div>
+        <h4>Contact</h4>
       </li>
     </ul>
   </nav>
