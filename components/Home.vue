@@ -1,11 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div
-    class="page homepage"
-    :class="{ 'active-page': isActive }"
-    v-on:enter="enter"
-    v-on:leave="leave"
-  >
+  <div class="page homepage" :class="{ 'active-page': isActive }">
     <div class="content-wrapper">
       <div class="details">
         <div>
