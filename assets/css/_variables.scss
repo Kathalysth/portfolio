@@ -1,0 +1,28 @@
+// Color system
+
+$white: #fff !default;
+$gray-50: #f6f6f6 !default;
+$gray-100: #babfc7 !default; // $gray-lightest
+$gray-200: #ededed !default; // $gray-lighter
+$gray-300: #dae1e7 !default; // $gray-light
+$gray-400: #636363 !default;
+$gray-500: #adb5bd !default;
+$gray-600: #b8c2cc !default; // $gray
+$gray-700: #4e5154 !default;
+$gray-800: #1e1e1e !default; // $gray-dark
+$gray-900: #2a2e30 !default;
+$black: #22292f !default; // 231f48 22292f
+
+$purple: #d1ccdc !default; //$primary
+$green: #28c76f !default; //$success
+$blue: #247ba0 !default; //$info
+$yellow: #ffe066 !default; //$info
+$orange: #f25f5c !default; //$warning
+$red: #561d25 !default; //$danger
+
+$primary: $blue !default;
+$secondary: $yellow !default;
+$info: #60e1e0 !default;
+$warning: $orange !default;
+$light: $gray-50 !default;
+$dark: #4b4b4b !default;
