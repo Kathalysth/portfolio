@@ -95,56 +95,105 @@ textarea {
 
   // page layout
 
-  .page {
+  main {
     min-width: calc(100vw - 100px);
     display: flex;
-  }
-
-  .homepage {
-    position: relative;
-    .content-wrapper {
-      display: flex;
+    .page {
       width: 100%;
-      padding: 0 1.5rem 0 0;
-      align-items: center;
-      justify-content: space-between;
-      .details {
-        max-width: 50vw;
-        h1 {
-          display: flex;
-          flex-direction: column;
+      position: relative;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.15s linear;
+      .page-title {
+        display: flex;
+        width: 100%;
+        position: relative;
+        padding: 80px 0;
+        height: 77px;
+        text-transform: uppercase;
+        .page-title-secondary {
+          font-size: 110px;
+          left: 0;
+          text-align: center;
+          letter-spacing: 10px;
+          line-height: 0.7;
+          position: absolute;
+          top: 50%;
+          right: 0;
           text-transform: uppercase;
-          font-size: 51px;
-          line-height: 62px;
-          font-weight: 700;
-          margin: 18px 0 10px;
-          .title-name {
-            color: $yellow;
+          font-weight: 800;
+          transform: translateY(-50%);
+          color: rgba($color: $secondary, $alpha: 0.5);
+        }
+        h1 {
+          z-index: 2;
+          font-size: 56px;
+          font-weight: 900 !important;
+          width: 100%;
+          text-align: center;
+          top: 50%;
+          line-height: 0.1;
+          transform: translateY(-50%);
+          color: $gray-600;
+          span {
+            color: $primary;
           }
         }
-        p {
-          margin-bottom: 1rem;
-          font-weight: 400;
-        }
-        // position: absolute;
-        // top: 50%;
-        // -ms-transform: translateY(-50%);
-        // transform: translateY(-50%);
-      }
-      .portrait {
-        height: 80vh;
-        width: 30vw;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        box-shadow: 0 0 7px rgb(0 0 0 / 90%);
-        border-radius: 30px;
-        background-image: url("../my-portrait.jpg");
       }
     }
-  }
+    .active-page {
+      display: block;
+      opacity: unset;
+      overflow: hidden;
+      transition: transform 400ms cubic-bezier(0.4, 0.1, 0.7, 0.95);
+    }
+    .homepage {
+      position: relative;
+      .content-wrapper {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        padding: 0 1.5rem 0 0;
+        align-items: center;
+        justify-content: space-between;
+        .details {
+          max-width: 50vw;
+          h1 {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            font-size: 51px;
+            line-height: 62px;
+            font-weight: 700;
+            margin: 18px 0 10px;
+            .title-name {
+              color: $yellow;
+            }
+          }
+          p {
+            margin-bottom: 1rem;
+            font-weight: 400;
+          }
+          // position: absolute;
+          // top: 50%;
+          // -ms-transform: translateY(-50%);
+          // transform: translateY(-50%);
+        }
+        .portrait {
+          height: 80vh;
+          width: 30vw;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+          border-radius: 30px;
+          background-image: url("../my-portrait.jpg");
+        }
+      }
+    }
 
-  .aboutpage {
+    .aboutpage {
+    }
   }
 
   .row {

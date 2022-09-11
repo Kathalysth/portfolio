@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="content">
-      <AppMenu />
-      <Nuxt />
+      <AppMenu :setActivePage="setActivePage" />
+      <NuxtChild :activePage="activePage" />
     </div>
     <AppFooter />
   </div>
@@ -16,6 +16,18 @@ export default {
   components: {
     AppMenu,
     AppFooter,
+  },
+  data() {
+    return {
+      activePage: 1,
+    };
+  },
+  methods: {
+    setActivePage(clickedPage) {
+      if (clickedPage !== this.activePage) {
+        this.activePage = clickedPage;
+      }
+    },
   },
 };
 </script>
