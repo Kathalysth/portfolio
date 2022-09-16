@@ -1,20 +1,23 @@
 <template>
   <main class="tab-content">
-    <Home :isActive="isActive(1)" />
+    <Home :isActive="isActive(1)" :setShowModal="setShowModal" />
     <About :isActive="isActive(2)" />
-    <Portfolio :isActive="isActive(3)" />
+    <Portfolio
+      :isActive="isActive(3)"
+      :setPortfolioDetails="setPortfolioDetails"
+    />
     <Contact :isActive="isActive(4)" />
   </main>
 </template>
 
 <script>
-import Home from "../components/Home.vue";
-import About from "../components/About.vue";
-import Portfolio from "../components/Portfolio.vue";
-import Contact from "../components/Contact.vue";
+import Home from "../components/tabs/Home.vue";
+import About from "../components/tabs/About.vue";
+import Portfolio from "../components/tabs/Portfolio.vue";
+import Contact from "../components/tabs/Contact.vue";
 export default {
   name: "IndexPage",
-  props: ["activePage"],
+  props: ["activePage", "setShowModal", "setPortfolioDetails"],
   components: { Home, About, Portfolio, Contact },
   methods: {
     isActive(pageNumber) {

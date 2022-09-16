@@ -1,5 +1,5 @@
 export default async ({
   store
 }) => {
-  await store.dispatch('getFoodData')
+  await store.dispatch('getRepos')
 }

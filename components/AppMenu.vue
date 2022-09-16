@@ -1,21 +1,18 @@
 <template>
   <nav>
     <ul>
-      <li @click="setActivePage(1)">
-        <div class="icon"><MaterialIconHome /></div>
-        <h4>Home</h4>
-      </li>
-      <li @click="setActivePage(2)">
-        <div class="icon"><MaterialIconAccount /></div>
-        <h4>About</h4>
-      </li>
-      <li @click="setActivePage(3)">
-        <div class="icon"><MaterialIconBriefcaseAccount /></div>
-        <h4>Portfolio</h4>
-      </li>
-      <li @click="setActivePage(4)">
-        <div class="icon"><MaterialIconCardAccountMail /></div>
-        <h4>Contact</h4>
+      <li
+        v-for="el in menu"
+        :key="el.id"
+        @click="setActivePage(el.id)"
+        :class="{ active: activePage === el.id ? true : false }"
+      >
+        <button>
+          <div class="icon">
+            <font-awesome-icon :icon="['fas', el.icon]" />
+          </div>
+          <h4>{{ el.name }}</h4>
+        </button>
       </li>
     </ul>
   </nav>
@@ -26,9 +23,35 @@
 import AppLogo from "./NuxtLogo.vue";
 
 export default {
-  props: ["setActivePage"],
+  props: ["setActivePage", "activePage"],
   components: {
     AppLogo,
+  },
+  data() {
+    return {
+      menu: [
+        {
+          id: 1,
+          name: "Home",
+          icon: "house-chimney",
+        },
+        {
+          id: 2,
+          name: "About",
+          icon: "address-card",
+        },
+        {
+          id: 3,
+          name: "Portfolio",
+          icon: "briefcase",
+        },
+        {
+          id: 4,
+          name: "Contact",
+          icon: "envelope-open",
+        },
+      ],
+    };
   },
 };
 </script>

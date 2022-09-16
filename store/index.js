@@ -3,49 +3,35 @@ import {
 } from "uuid";
 
 export const state = () => ({
-  cart: [],
+  repos: [],
   projectData: []
 });
 
 export const getters = {
-  cartCount: state => {
-    if (!state.cart.length) return 0;
-    return state.cart.reduce((ac, next) => ac + +next.count, 0);
-  },
-  totalPrice: state => {
-    if (!state.cart.length) return 0;
-    return state.cart.reduce((ac, next) => ac + +next.combinedPrice, 0);
-  }
+ 
 };
 
 export const mutations = {
-  addToCart: (state, formOutput) => {
-    formOutput.id = uuidv4();
-    state.cart.push(formOutput);
-  },
   updateProjectData: (state, data) => {
     state.projectData = data;
+  },
+  updateRepoData: (state, data) => {
+    state.repos = data;
   }
 };
 
 export const actions = {
-  async getProjectData({
+  async getRepos({
     state,
     commit
   }) {
-    if (state.projectData.length) return;
+    if (state.repos.length) return;
 
     try {
-      await fetch(
-          "https://dva9vm8f1h.execute-api.us-east-2.amazonaws.com/production/restaurants", {
-            headers: {
-              "Content-Type": "application/json",
-            }
-          }
-        )
+      await fetch("https://api.github.com/users/kathalysth/repos")
         .then(response => response.json())
         .then(data => {
-          commit("updateProjectData", data);
+          commit("updateRepoData", data);
         });
     } catch (err) {
       console.log(err);

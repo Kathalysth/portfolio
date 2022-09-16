@@ -1,8 +1,7 @@
 <template>
   <footer>
-    <p>Copyright information goes here.</p>
+    <p>Chris Ehigimetor, Copyright {{ new Date().getFullYear() }}.</p>
   </footer>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
