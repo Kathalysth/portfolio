@@ -56,7 +56,14 @@
             <div class="row">
               <div class="col-12 col-lg-6">
                 <div class="form-group">
-                  <input type="text" v-model="name" placeholder="Your Name" />
+                  <input
+                    type="text"
+                    v-model="name"
+                    placeholder="Your Name"
+                    name="name"
+                    required
+                    aria-required="true"
+                  />
                 </div>
               </div>
               <div class="col-12 col-lg-6">
@@ -65,12 +72,22 @@
                     type="email"
                     v-model="email"
                     placeholder="Your Email"
+                    name="email"
+                    required
+                    aria-required="true"
                   />
                 </div>
               </div>
               <div class="col-12 col-lg-12">
                 <div class="form-group">
-                  <input type="text" v-model="subject" placeholder="Subject" />
+                  <input
+                    type="text"
+                    v-model="subject"
+                    placeholder="Subject"
+                    name="subject"
+                    required
+                    aria-required="true"
+                  />
                 </div>
               </div>
               <div class="col-12">
@@ -80,6 +97,8 @@
                     v-model="message"
                     placeholder="Message"
                     rows="5"
+                    name="message"
+                    aria-required="true"
                   ></textarea>
                 </div>
               </div>
@@ -116,7 +135,7 @@ export default {
   },
   methods: {
     handleFormSubmit() {
-      fetch(process.env.VUE_APP_FORM_SUBMIT_API, {
+      fetch("https://formsubmit.co/ajax/ambyehigimetor@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
