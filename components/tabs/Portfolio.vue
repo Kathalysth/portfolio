@@ -1,5 +1,11 @@
 <template>
-  <div class="page portfoliopage" :class="{ 'active-page': isActive }">
+  <div
+    class="page portfoliopage"
+    :class="{
+      'active-page': isActive,
+      'animate__animated animate__fadeInUp': isActive,
+    }"
+  >
     <div class="page-wrapper">
       <PageHeader :title="'my portfolio'" :secondaryTitle="'works'" />
       <section>

@@ -1,5 +1,11 @@
 <template>
-  <div class="page contactpage" :class="{ 'active-page': isActive }">
+  <div
+    class="page contactpage"
+    :class="{
+      'active-page': isActive,
+      'animate__animated animate__zoomIn': isActive,
+    }"
+  >
     <div class="page-wrapper">
       <PageHeader :title="'Get in touch'" :secondaryTitle="'contact'" />
       <div class="row">
@@ -46,26 +52,35 @@
         </ul> -->
         </div>
         <div class="col-12 col-lg-6">
-          <form class="contactform">
+          <form class="contactform" @submit.prevent="handleFormSubmit">
             <div class="row">
               <div class="col-12 col-lg-6">
                 <div class="form-group">
-                  <input type="text" placeholder="Your Name" />
+                  <input type="text" v-model="name" placeholder="Your Name" />
                 </div>
               </div>
               <div class="col-12 col-lg-6">
                 <div class="form-group">
-                  <input type="text" placeholder="Your Email" />
+                  <input
+                    type="email"
+                    v-model="email"
+                    placeholder="Your Email"
+                  />
                 </div>
               </div>
               <div class="col-12 col-lg-12">
                 <div class="form-group">
-                  <input type="text" placeholder="Subject" />
+                  <input type="text" v-model="subject" placeholder="Subject" />
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <textarea type="" placeholder="Message" rows="5"></textarea>
+                  <textarea
+                    type=""
+                    v-model="message"
+                    placeholder="Message"
+                    rows="5"
+                  ></textarea>
                 </div>
               </div>
               <div class="col-12">
@@ -91,5 +106,45 @@ export default {
   name: "ContactPage",
   props: ["isActive"],
   components: { PageHeader },
+  data() {
+    return {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
+  },
+  methods: {
+    handleFormSubmit() {
+      fetch(process.env.VUE_APP_FORM_SUBMIT_API, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          subject: this.subject,
+          message: this.message,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          this.$swal(
+            "Thank You!",
+            "I appreciate you taking the time to reach out!",
+            "success"
+          );
+          this.name = "";
+          this.subject = "";
+          this.message = "";
+          this.email = "";
+        })
+        .catch((error) =>
+          this.$swal("Something went wrong!", "Please try again!", "error")
+        );
+    },
+  },
 };
 </script>

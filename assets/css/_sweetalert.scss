@@ -1,0 +1,11 @@
+@import "variables";
+
+.swal2-styled.swal2-confirm {
+  background-color: $primary !important;
+  border-radius: $border-radius !important;
+  border: none !important;
+  outline: none !important;
+}
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: unset !important;
+}

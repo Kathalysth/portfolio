@@ -1,6 +1,8 @@
 <template>
   <div class="modal portfolio-details" @click="$emit('close-modal')">
-    <div class="modal-dialog modal-dialog-center portfolio-modal">
+    <div
+      class="modal-dialog modal-dialog-centered portfolio-modal modal-dialog-scrollable modal-xl"
+    >
       <div class="modal-content portfolio-modal">
         <span class="close">&times;</span>
         <!-- details -->

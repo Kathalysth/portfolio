@@ -1,6 +1,8 @@
 <template>
   <div class="modal portfolio-details" @click="$emit('close-modal')">
-    <div class="modal-dialog modal-dialog-center portfolio-modal">
+    <div
+      class="modal-dialog modal-dialog-centered portfolio-modal modal-dialog-scrollable modal-xl"
+    >
       <div class="modal-content portfolio-modal">
         <span class="close">&times;</span>
         <!-- details -->
@@ -13,14 +15,14 @@
                   <h4>{{ details.description }}</h4>
                   <ul class="row">
                     <li class="col-12 col-sm-6">
-                      <span class="project-label">Topics:</span>
+                      <span class="project-label">Tools:</span>
                       <span class="project-label-value">
                         <ul class="topics">
                           <li
-                            v-for="(topic, index) in details.topics"
+                            v-for="(tool, index) in details.tools"
                             :key="index"
                           >
-                            <span class="badge">{{ topic }}</span>
+                            <span class="badge">{{ tool }}</span>
                           </li>
                         </ul>
                       </span>
@@ -32,18 +34,14 @@
                       }}</span>
                     </li>
                     <li class="col-12 col-sm-6">
-                      <span class="project-label">Type:</span>
+                      <span class="project-label">Website:</span>
                       <span class="project-label-value">{{
-                        details.private ? "Private" : "Public"
+                        details.website
                       }}</span>
                     </li>
                     <li class="col-12 col-sm-6">
-                      <span class="project-label">Link:</span>
-                      <span
-                        ><a :href="details.html_url" target="_blank">{{
-                          details.html_url
-                        }}</a></span
-                      >
+                      <span class="project-label">Date Completed:</span>
+                      <span> {{ details.dateCompleted }} </span>
                     </li>
                   </ul>
                 </figcaption>

@@ -1,5 +1,11 @@
 <template>
-  <div class="page aboutpage" :class="{ 'active-page': isActive }">
+  <div
+    class="page aboutpage"
+    :class="{
+      'active-page': isActive,
+      'animate__animated animate__zoomIn': isActive,
+    }"
+  >
     <div class="page-wrapper">
       <PageHeader :title="'About me'" :secondaryTitle="'resume'" />
       <section>
@@ -43,8 +49,9 @@
                 <li>
                   <span class="label">github</span>
                   <span class="label-value">
-                    <a href="https://github.com/kathalysth" target="_blank"
-                      >View GitHUB</a
+                    <a href="https://github.com/kathalysth" target="_blank">
+                      <font-awesome-icon :icon="['fas', 'link']" /> View
+                      GitHUB</a
                     >
                   </span>
                 </li>

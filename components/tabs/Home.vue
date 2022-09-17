@@ -1,6 +1,12 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="page homepage fade" :class="{ 'active-page': isActive }">
+  <div
+    class="page homepage fade"
+    :class="{
+      'active-page': isActive,
+      'animate__animated animate__zoomIn': isActive,
+    }"
+  >
     <div class="container-fluid">
       <div class="content-wrapper row">
         <div class="details col-12 col-lg-8 offset-lg-4">

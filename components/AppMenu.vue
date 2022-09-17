@@ -5,7 +5,11 @@
         v-for="el in menu"
         :key="el.id"
         @click="setActivePage(el.id)"
-        :class="{ active: activePage === el.id ? true : false }"
+        :class="{
+          active: activePage === el.id ? true : false,
+          'animate__animated animate__fadeIn':
+            activePage === el.id ? true : false,
+        }"
       >
         <button>
           <div class="icon">

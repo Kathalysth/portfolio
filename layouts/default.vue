@@ -23,6 +23,7 @@ import AppMenu from "../components/AppMenu.vue";
 import AppFooter from "../components/AppFooter.vue";
 import Modal from "../components/AppModal.vue";
 import PortfolioDetails from "../components/modals/PortfolioDetails.vue";
+import "animate.css";
 export default {
   components: {
     AppMenu,
