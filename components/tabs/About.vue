@@ -58,13 +58,13 @@
               </ul>
             </div>
             <div>
-              <button class="button">
+              <a class="button" :href="require('@/assets/resume.pdf')" download>
                 <span class="btn-text">Download Resume</span>
                 <font-awesome-icon
                   :icon="['fas', 'download']"
                   class="btn-icon"
                 />
-              </button>
+              </a>
             </div>
           </div>
           <div class="row col-12 col-lg-5 mt-5 mt-lg-0 experience-card-list">
