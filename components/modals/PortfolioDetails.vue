@@ -1,10 +1,10 @@
 <template>
   <div class="modal portfolio-details" @click="$emit('close-modal')">
     <div
-      class="modal-dialog modal-dialog-centered portfolio-modal modal-dialog-scrollable modal-xl"
+      class="modal-dialog modal-dialog-centered portfolio-modal modal-dialog-scrollable"
     >
       <div class="modal-content portfolio-modal">
-        <span class="close">&times;</span>
+        <span class="close" aria-label="close">&times;</span>
         <!-- details -->
         <div class="modal-body">
           <div>
@@ -45,9 +45,7 @@
                     </li>
                   </ul>
                 </figcaption>
-                <div class="img-wrapper">
-                  <img :src="require('@/assets/portfolio-card.jpg')" />
-                </div>
+                <img :src="require('@/assets/portfolio-card.jpg')" />
               </figure>
             </div>
           </div>

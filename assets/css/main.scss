@@ -661,6 +661,7 @@ footer {
 .modal-dialog {
   position: relative;
   width: auto;
+  transform: none;
   margin: 0.5rem;
   pointer-events: none;
 }
@@ -708,7 +709,7 @@ footer {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  // padding: 1rem;
+  padding: 0;
   overflow-y: auto;
   border: 2px solid #efefef;
   figure {
@@ -865,7 +866,7 @@ footer {
       }
     }
   }
-  .portfolio-modal.modal-dialog {
+  .about.modal-dialog {
     max-width: 1140px;
   }
 }

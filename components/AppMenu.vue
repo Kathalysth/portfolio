@@ -23,14 +23,8 @@
 </template>
 
 <script>
-// import { mapGetters } from "vuex";s
-import AppLogo from "./NuxtLogo.vue";
-
 export default {
   props: ["setActivePage", "activePage"],
-  components: {
-    AppLogo,
-  },
   data() {
     return {
       menu: [
