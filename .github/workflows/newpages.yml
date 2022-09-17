@@ -45,6 +45,8 @@ jobs:
             echo "Unable to determine packager manager"
             exit 1
           fi
+        env:
+         VUE_APP_FORM_SUBMIT_API: ${{ secrets.VUE_APP_FORM_SUBMIT_API }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
