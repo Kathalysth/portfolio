@@ -1,12 +1,11 @@
-# My Portfolio Web page
+# My Portfolio App
 https://kathalysth.github.io/portfolio/
 
 ### _My Portfolio_
 
 ## Task
 
-Build a progressive web-app that manages students and lecturers from a university's department. It involves building the frontend and backend separately and connecting them. You are welcome to use any technology to build it and design the layout in any way that you see fit.
-
+Build a vuejs web-app with NuxtJS that showcases my portfolio, skills, experiences and a quick and easy way to reach out to me.
 ## Criteria
 
 - Choice of design, layout and intuitiveness of interface
@@ -18,7 +17,7 @@ Build a progressive web-app that manages students and lecturers from a universit
 
 ## Summary of Tech Stack
 
-This app was built using the latest and greatest technologies out today. I chose to build it in React becuase of **React's** flexible architecture for building component based applications. I chose to use **Redux** as my single state handler becasue of its overall clean and effective way of handling the state of the application especially for scaling it larger. I chose **Webpack** beause well, I love using it. It takes away the layer that other task runners like Gulp and Grunt add to projects. I chose **NodeJs** to build out the server because of it's robust and easy to implement architecture with I would proceed to deploy on **Digital Ocean** . I went with a simple **EspressJs** server.
+This app was built using the latest and greatest technologies out today. I chose to build it in Vue becuase of **Vue's** flexible architecture for building component based applications with **NUxtJS**. I chose to use **Sass** as my css preprocessor using the scss extension because I love **Sass**.
 
 ## Functionality
 
