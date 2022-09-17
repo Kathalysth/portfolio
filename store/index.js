@@ -6,7 +6,7 @@ export const state = () => ({
     name:"Invoicing Web Application",
     description:"An Invoicing application built with Reactjs and Nodejs. it allows contractors submit work related invoices to a backend server for validation and approval.",
     image:"",
-    client:"Employer(NPDC)",
+    client:"Employers",
     tools:["React", "NodeJS", "MongoDB", "LDAP", "AD"],
     dateCompleted:"2022-04-15",
     website:"Internally Consumed"
@@ -33,7 +33,7 @@ export const state = () => ({
     name:"Intern Management Application",
     description:"",
     image:"",
-    client:"Employer (NPDC)",
+    client:"Employers",
     tools:["React", "Nodejs", "Sass", "MongoDB", "AD", "LDAP"],
     website:"itdima.herokuapp.com",
     dateCompleted:"2021-11-15"
@@ -42,7 +42,7 @@ export const state = () => ({
     name:"Service Management Portal - Helpdesk",
     description:"An Application built with reactJs and NodeJS for making ICT service request and incident reporting within the company.",
     image:"",
-    client:"Employer (NPDC)",
+    client:"Employers",
     tools:["React", "Nodejs", "Sass", "MongoDB", "Vitejs", "LDAP", "AD"],
     dateCompleted:"2022-08-29",
     website:"Internally Consumed"
@@ -51,9 +51,6 @@ export const state = () => ({
   projectData: []
 });
 
-export const getters = {
- 
-};
 
 export const mutations = {
   updateProjectData: (state, data) => {
