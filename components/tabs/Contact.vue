@@ -103,12 +103,21 @@
                 </div>
               </div>
               <div class="col-12">
-                <button class="button">
-                  <span class="btn-text">Send Message</span>
-                  <font-awesome-icon
-                    :icon="['fas', 'paper-plane']"
-                    class="btn-icon"
-                  />
+                <button class="button" :disabled="isLoading">
+                  <div v-if="isLoading">
+                    <span>Loading...</span>
+                    <font-awesome-icon
+                      :icon="['fas', 'spinner']"
+                      class="btn-icon spin"
+                    />
+                  </div>
+                  <div v-else>
+                    <span class="btn-text">Send Message</span>
+                    <font-awesome-icon
+                      :icon="['fas', 'paper-plane']"
+                      class="btn-icon"
+                    />
+                  </div>
                 </button>
               </div>
             </div>
@@ -131,10 +140,12 @@ export default {
       email: "",
       subject: "",
       message: "",
+      isLoading: false,
     };
   },
   methods: {
     handleFormSubmit() {
+      this.isLoading = true;
       fetch("https://formsubmit.co/ajax/ambyehigimetor@gmail.com", {
         method: "POST",
         headers: {
@@ -159,10 +170,12 @@ export default {
           this.subject = "";
           this.message = "";
           this.email = "";
+          this.isLoading = false;
         })
-        .catch((error) =>
-          this.$swal("Something went wrong!", "Please try again!", "error")
-        );
+        .catch((error) => {
+          this.isLoading = false;
+          this.$swal("Something went wrong!", "Please try again!", "error");
+        });
     },
   },
 };

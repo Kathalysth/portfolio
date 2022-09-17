@@ -635,6 +635,13 @@ footer {
       border-radius: $border-radius;
     }
   }
+  .project-label {
+    color: $primary;
+    font-weight: 600;
+  }
+  .project-label-value {
+    font-style: italic;
+  }
 }
 .mt-5 {
   margin-top: 3rem !important;
@@ -1112,11 +1119,18 @@ footer {
   }
 }
 
-/* Page-specific styles */
+.spin {
+  position: relative;
+  animation: rotate 2s linear infinite;
+}
+.spin:before {
+  content: "";
+  position: absolute;
+  animation: rotate 2s linear reverse infinite;
+}
 
-@keyframes scaleUpDown {
-  from {
-    opacity: 0;
-    transform: scale(1.2);
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
   }
 }

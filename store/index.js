@@ -4,16 +4,16 @@ export const state = () => ({
   repos: [
     {
     name:"Invoicing Web Application",
-    description:"",
+    description:"An Invoicing application built with Reactjs and Nodejs. it allows contractors submit work related invoices to a backend server for validation and approval.",
     image:"",
-    client:"Employer",
+    client:"Employer(NPDC)",
     tools:["React", "NodeJS", "MongoDB", "LDAP", "AD"],
     dateCompleted:"2022-04-15",
     website:"Internally Consumed"
   },
     {
     name:"Student Information Management System (PWA) ",
-    description:"",
+    description:"Build a progressive web-app that manages students and lecturers from a university's department.",
     image:"",
     client:"Collaboration",
     tools:["React", "NodeJS", "MongoDB", "Express"],
@@ -22,7 +22,7 @@ export const state = () => ({
   },
     {
     name:"Portfolio Website",
-    description:"",
+    description:"Built a Vuejs web-app with NuxtJS that showcases my portfolio, skills, experiences and a quick and easy way to reach out to me.",
     image:"",
     client:"Self",
     tools:["Vue", "NuxtJs", "Sass"],
@@ -33,16 +33,16 @@ export const state = () => ({
     name:"Intern Management Application",
     description:"",
     image:"",
-    client:"Employer",
+    client:"Employer (NPDC)",
     tools:["React", "Nodejs", "Sass", "MongoDB", "AD", "LDAP"],
     website:"itdima.herokuapp.com",
     dateCompleted:"2021-11-15"
   },
     {
     name:"Service Management Portal - Helpdesk",
-    description:"",
+    description:"An Application built with reactJs and NodeJS for making ICT service request and incident reporting within the company.",
     image:"",
-    client:"Employer",
+    client:"Employer (NPDC)",
     tools:["React", "Nodejs", "Sass", "MongoDB", "Vitejs", "LDAP", "AD"],
     dateCompleted:"2022-08-29",
     website:"Internally Consumed"

@@ -6,7 +6,7 @@
       <div class="modal-content portfolio-modal">
         <span class="close">&times;</span>
         <!-- details -->
-        <div class="modal-body">
+        <div class="modal-body" @click.stop>
           <About />
         </div>
       </div>

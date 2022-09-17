@@ -6,7 +6,7 @@
       <div class="modal-content portfolio-modal">
         <span class="close" aria-label="close">&times;</span>
         <!-- details -->
-        <div class="modal-body">
+        <div class="modal-body" @click.stop>
           <div>
             <div>
               <figure>
@@ -28,9 +28,9 @@
                       </span>
                     </li>
                     <li class="col-12 col-sm-6">
-                      <span class="project-label">Languages:</span>
+                      <span class="project-label">Client:</span>
                       <span class="project-label-value">{{
-                        details.language
+                        details.client
                       }}</span>
                     </li>
                     <li class="col-12 col-sm-6">
