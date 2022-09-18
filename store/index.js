@@ -34,7 +34,7 @@ export const state = () => ({
     description:"",
     image:"",
     client:"Employers",
-    tools:["React", "Nodejs", "Sass", "MongoDB", "AD", "LDAP"],
+    tools:["React", "Nodejs", "Sass", "MongoDB", "AD", "LDAP", "Rest-Api"],
     website:"itdima.herokuapp.com",
     dateCompleted:"2021-11-15"
   },
@@ -43,7 +43,7 @@ export const state = () => ({
     description:"An Application built with reactJs and NodeJS for making ICT service request and incident reporting within the company.",
     image:"",
     client:"Employers",
-    tools:["React", "Nodejs", "Sass", "MongoDB", "Vitejs", "LDAP", "AD"],
+    tools:["React", "Nodejs", "Sass", "MongoDB", "Vitejs", "LDAP", "AD", "Rest-Api"],
     dateCompleted:"2022-08-29",
     website:"Internally Consumed"
   },

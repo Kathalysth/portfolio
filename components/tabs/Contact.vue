@@ -12,9 +12,10 @@
         <div class="contact col-12 col-lg-5 addr">
           <h3>REACH OUT!</h3>
           <p>
-            Feel free to get in touch with me. I am open to discussing new
-            projects, creative ideas or opportunities to be part of your
-            visions.
+            You can get in touch with me. I am open to discussing new projects
+            or improving on existing ones, creative collaborations or
+            opportunities to explore the boundless possibilities of software
+            design.
           </p>
           <address>
             <font-awesome-icon :icon="['fas', 'map']" />
@@ -23,7 +24,7 @@
           </address>
           <address>
             <font-awesome-icon :icon="['fas', 'envelope']" />
-            <h5>SEND a mAIL</h5>
+            <h5>Send a mail</h5>
             <p>ambassadorehigimetor@gmail.com</p>
           </address>
           <address>
@@ -31,25 +32,30 @@
             <h5>Call</h5>
             <p>+2349036356829</p>
           </address>
-          <!-- <ul>
-          <li>
-            <a
-              href="https://linkedin.com/in/ambassador-chris-ehigimetor"
-              target="_blank"
-              ><font-awesome-icon :icon="['fab', 'linkedin']"
-            /></a>
-          </li>
-          <li>
-            <a href="https://instagram.com/bishopsirhchris" target="_blank"
-              ><font-awesome-icon :icon="['fab', 'instagram']"
-            /></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/bishopsirhchris" target="_blank"
-              ><font-awesome-icon :icon="['fab', 'twitter']"
-            /></a>
-          </li>
-        </ul> -->
+          <ul>
+            <li>
+              <a
+                href="https://linkedin.com/in/ambassador-chris-ehigimetor"
+                target="_blank"
+                ><img :src="linkedinLogo"
+              /></a>
+            </li>
+            <li>
+              <a href="https://instagram.com/bishopsirhchris" target="_blank"
+                ><img :src="instagramLogo"
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/bishopsirhchris" target="_blank"
+                ><img :src="twitterLogo"
+              /></a>
+            </li>
+            <li>
+              <a href="https://github.com/kathalysth" target="_blank"
+                ><img :src="gitHubLogo"
+              /></a>
+            </li>
+          </ul>
         </div>
         <div class="col-12 col-lg-6">
           <form class="contactform" @submit.prevent="handleFormSubmit">
@@ -130,6 +136,7 @@
 
 <script>
 import PageHeader from "../PageHeader.vue";
+
 export default {
   name: "ContactPage",
   props: ["isActive"],
@@ -141,6 +148,10 @@ export default {
       subject: "",
       message: "",
       isLoading: false,
+      instagramLogo: require("@/assets/img/svg/instagram.svg"),
+      twitterLogo: require("@/assets/img/svg/twitter.svg"),
+      linkedinLogo: require("@/assets/img/svg/linkedin.svg"),
+      gitHubLogo: require("@/assets/img/svg/github.svg"),
     };
   },
   methods: {

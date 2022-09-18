@@ -1,6 +1,6 @@
 <template>
   <div class="education-card">
-    <div class="icon"><MaterialIconBriefcaseAccount /></div>
+    <img :src="icon" class="icon text-white" />
     <span class="timeline">{{ timeline }}</span>
     <h5>
       {{ study }} <span>{{ school }}</span>
@@ -16,6 +16,6 @@
 <script>
 export default {
   name: "EducationCard",
-  props: ["timeline", "study", "school", "description"],
+  props: ["timeline", "study", "school", "description", "icon"],
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Chris Ehigimetor, Copyright {{ new Date().getFullYear() }}.</p>
+    <p>© {{ new Date().getFullYear() }} Chris Ehigimetor.</p>
   </footer>
 </template>
 

@@ -82,7 +82,11 @@
               <div class="skills-wrapper">
                 <ul class="skills-list">
                   <li v-for="el in skills" :key="el.name">
-                    <SkillCard :number="el.level" :text="el.name" />
+                    <SkillCard
+                      :number="el.level"
+                      :text="el.name"
+                      :logo="el.logo"
+                    />
                   </li>
                 </ul>
               </div>
@@ -106,6 +110,7 @@
                     :study="el.study"
                     :school="el.place"
                     :description="el.description"
+                    :icon="el.icon"
                   />
                 </li>
               </ul>
@@ -122,6 +127,16 @@ import ExperienceCard from "../cards/Experience.vue";
 import EducationCard from "../cards/Education.vue";
 import SkillCard from "../cards/Skill.vue";
 import PageHeader from "../PageHeader.vue";
+
+const reactLogo = require("@/assets/img/svg/react.svg");
+const cssLogo = require("@/assets/img/svg/css.svg");
+const htmlLogo = require("@/assets/img/svg/html.svg");
+const nodejsLogo = require("@/assets/img/svg/nodejs.svg");
+const vueLogo = require("@/assets/img/svg/vue.svg");
+const jsLogo = require("@/assets/img/svg/js.svg");
+const educationLogo = require("@/assets/img/svg/graduation-cap.svg");
+const workerLogo = require("@/assets/img/svg/worker.svg");
+
 export default {
   name: "AboutPage",
   props: ["isActive"],
@@ -133,6 +148,7 @@ export default {
           timeline: "Aug 2021 – Jul 2022",
           study: "Software Engineer Intern",
           place: "ALX Africa",
+          icon: workerLogo,
           description: [
             `Focused on building multiple projects and learning how to function in a team.
 Formed learning groups called buddies, where team members get to collaborate on
@@ -148,6 +164,7 @@ technologies.`,
           timeline: "Apr 2020 -  Aug 2020",
           study: "Nigerian Petroleum Development Company (NPDC)",
           place: "Industrial Trainee",
+          icon: workerLogo,
           description: [
             `Working in a fast-paced and demanding environment as an intern where I was on
 hand to respond to incidents from clients while interacting with ICT assets.`,
@@ -160,6 +177,7 @@ monthly reports.`,
         {
           timeline: "2016 - 2021",
           study: "Computer Engineering",
+          icon: educationLogo,
           place: "University of Benin",
           description: [
             `Software Engineering - Software Development Life Cycle Development Models. Software Analysis, Design, and Modelling. Requirements Engineering.`,
@@ -173,6 +191,7 @@ monthly reports.`,
         {
           timeline: "Aug 2021 -  Jun 2022",
           study: "Software Engineering",
+          icon: workerLogo,
           place: "ALX Africa",
           description: [
             `One-year hands-on training where we focused on Linux Os, git, C++, and advanced software engineering principles`,
@@ -181,6 +200,7 @@ monthly reports.`,
         {
           timeline: "Oct 2020 -  Mar 2021",
           study: "Cloud Engineering",
+          icon: workerLogo,
           place: "AltSchool Africa",
           description: [
             `Six months of training on cloud engineering, the first 3 months dedicated to HTML, CSS, and Javascript, then focused on cloud, Linux, SSH, and Vagrant.`,
@@ -191,26 +211,32 @@ monthly reports.`,
         {
           name: "react",
           level: 75,
+          logo: reactLogo,
         },
         {
           name: "vue",
           level: 65,
+          logo: vueLogo,
         },
         {
           name: "javascript",
           level: 85,
+          logo: jsLogo,
         },
         {
           name: "node",
           level: 60,
+          logo: nodejsLogo,
         },
         {
           name: "html",
           level: 90,
+          logo: htmlLogo,
         },
         {
           name: "css",
           level: 70,
+          logo: cssLogo,
         },
       ],
     };

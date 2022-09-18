@@ -1,18 +1,30 @@
 <template>
-  <div class="skill-card">
+  <div
+    class="skill-card"
+    :class="{
+      'animate__animated animate__heartBeat': isHover,
+    }"
+    @mouseover="isHover = true"
+    @mouseleave="isHover = false"
+  >
     <div
       role="progressbar"
       :aria-valuenow="number"
       aria-valuemax="100"
       :style="{ '--value': number }"
     ></div>
-    <h6>{{ text }}</h6>
+    <img :src="logo" />
   </div>
 </template>
 
 <script>
 export default {
   name: "SkillCard",
-  props: ["number", "text"],
+  props: ["number", "text", "logo"],
+  data() {
+    return {
+      isHover: false,
+    };
+  },
 };
 </script>
