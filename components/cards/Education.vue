@@ -1,6 +1,6 @@
 <template>
   <div class="education-card">
-    <img :src="icon" class="icon text-white" />
+    <div class="icon"><img :src="icon" class="icon-img" /></div>
     <span class="timeline">{{ timeline }}</span>
     <h5>
       {{ study }} <span>{{ school }}</span>
