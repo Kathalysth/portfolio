@@ -512,7 +512,7 @@ section {
   background-position: -100% 0;
   background-size: 200% 100%;
   transition: all 0.5s ease-out;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none !important;
   position: relative;
   z-index: 1;
