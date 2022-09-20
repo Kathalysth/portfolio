@@ -26,7 +26,7 @@ export const state = () => ({
     image:"",
     client:"Self",
     tools:["Vue", "NuxtJs", "Sass"],
-    dateCompleted:"2022-09-15",
+    dateCompleted:"2022-05-01",
     website:"https://kathalysth.github.io/portfolio/"
   },
     {
