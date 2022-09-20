@@ -35,7 +35,7 @@ export const state = () => ({
     image:"",
     client:"Employers",
     tools:["React", "Nodejs", "Sass", "MongoDB", "AD", "LDAP", "Rest-Api"],
-    website:"itdima.herokuapp.com",
+    website:"https://itdima.herokuapp.com",
     dateCompleted:"2021-11-15"
   },
     {

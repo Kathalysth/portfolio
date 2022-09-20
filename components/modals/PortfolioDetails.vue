@@ -35,7 +35,17 @@
                     </li>
                     <li class="col-12 col-sm-6">
                       <span class="project-label">Website:</span>
-                      <span class="project-label-value">{{
+                      <span
+                        v-if="
+                          details.website !== '' &&
+                          details.website !== 'Internally Consumed'
+                        "
+                        class="project-label-value"
+                        ><a :href="details.website" target="_blank">{{
+                          details.website
+                        }}</a></span
+                      >
+                      <span v-else class="project-label-value">{{
                         details.website
                       }}</span>
                     </li>
