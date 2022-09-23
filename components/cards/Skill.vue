@@ -7,12 +7,6 @@
     @mouseover="isHover = true"
     @mouseleave="isHover = false"
   >
-    <div
-      role="progressbar"
-      :aria-valuenow="number"
-      aria-valuemax="100"
-      :style="{ '--value': number }"
-    ></div>
     <img :src="logo" />
   </div>
 </template>
