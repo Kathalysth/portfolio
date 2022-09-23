@@ -78,7 +78,7 @@
         <div class="skills-section">
           <div class="flex">
             <div class="section-title">
-              <h3 class="text-center">MY SKILLS</h3>
+              <h3 class="text-center">TOOLS</h3>
               <div class="skills-wrapper">
                 <ul class="skills-list">
                   <li v-for="el in skills" :key="el.name">
