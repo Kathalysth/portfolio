@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul>
+    <ul class="">
       <li
         v-for="el in menu"
         :key="el.id"

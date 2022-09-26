@@ -67,10 +67,6 @@
               </a>
             </div>
           </div>
-          <div class="row col-12 col-lg-5 mt-5 mt-lg-0 experience-card-list">
-            <ExperienceCard :number="3" :text="'Years of experience'" />
-            <ExperienceCard :number="10" :text="'Open Source contributions'" />
-          </div>
         </div>
 
         <!-- Skills -->
@@ -90,30 +86,6 @@
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- education / experience -->
-        <div class="flex exp">
-          <div class="flex flex-col equal-width">
-            <div class="section-title">
-              <h3 class="text-center">Experience & Education</h3>
-              <ul class="experiences">
-                <li
-                  v-for="el in experiences"
-                  :key="el.timeline"
-                  class="col-12 col-lg-6"
-                >
-                  <EducationCard
-                    :timeline="el.timeline"
-                    :study="el.study"
-                    :school="el.place"
-                    :description="el.description"
-                    :icon="el.icon"
-                  />
-                </li>
-              </ul>
             </div>
           </div>
         </div>
