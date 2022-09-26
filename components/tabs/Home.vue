@@ -9,14 +9,14 @@
   >
     <div class="container-fluid">
       <div class="content-wrapper row">
-        <div class="details col-12 col-lg-8 offset-lg-4">
+        <div class="details col-12 col-lg-8">
           <div>
             <img
               class="img-mobile"
               :src="require('@/assets/my-portrait.jpg')"
             />
             <h1>
-              I'M Chris Ehigimetor.
+              Chris Ehigimetor.
               <span>Frontend Developer</span>
             </h1>
             <p>
@@ -27,7 +27,7 @@
               projects.
             </p>
             <button class="button" @click="setShowModal">
-              <span class="btn-text">More About me</span>
+              <span class="btn-text">See More</span>
               <font-awesome-icon
                 :icon="['fas', 'arrow-right']"
                 class="btn-icon"
@@ -35,7 +35,7 @@
             </button>
           </div>
         </div>
-        <div class="portrait col-12 col-lg-4"></div>
+        <div class="portrait col-12 ms-auto"></div>
       </div>
     </div>
   </div>
