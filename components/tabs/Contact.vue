@@ -65,7 +65,7 @@
                   <input
                     type="text"
                     v-model="name"
-                    placeholder="Your Name"
+                    placeholder="Enter Name"
                     name="name"
                     required
                     aria-required="true"
@@ -77,7 +77,7 @@
                   <input
                     type="email"
                     v-model="email"
-                    placeholder="Your Email"
+                    placeholder="Enter Email"
                     name="email"
                     required
                     aria-required="true"
@@ -101,7 +101,7 @@
                   <textarea
                     type=""
                     v-model="message"
-                    placeholder="Message"
+                    placeholder="Type a message..."
                     rows="5"
                     name="message"
                     aria-required="true"

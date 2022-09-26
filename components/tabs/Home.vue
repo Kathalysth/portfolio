@@ -35,7 +35,7 @@
             </button>
           </div>
         </div>
-        <div class="portrait col-12 ms-auto"></div>
+        <div class="portrait col-12 ms-auto cod"></div>
       </div>
     </div>
   </div>
