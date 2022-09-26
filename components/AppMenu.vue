@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul class="">
+    <ul>
       <li
         v-for="el in menu"
         :key="el.id"
@@ -11,11 +11,11 @@
             activePage === el.id ? true : false,
         }"
       >
-        <button>
-          <div class="icon">
+        <button class="d-flex align-items-center">
+          <div class="icon col-3">
             <font-awesome-icon :icon="['fas', el.icon]" />
           </div>
-          <h4>{{ el.name }}</h4>
+          <h4 class="ms-2 col-9">{{ el.name }}</h4>
         </button>
       </li>
     </ul>

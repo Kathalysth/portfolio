@@ -3,6 +3,34 @@
 @import "card";
 @import "sweetalert";
 
+html {
+  font-family: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
 body,
 button,
 input,
@@ -106,36 +134,60 @@ footer {
 nav {
   padding: 5px 5px;
   color: white;
+  background-color: $gray-10;
+  border-radius: 15px;
   max-width: 200px;
-  margin: auto 2rem !important;
+  margin: auto 2rem;
+  font-size: 0.9rem;
   position: fixed;
   left: 0%;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 5;
-  display: flex;
-  justify-content: space-between;
-  .active .icon {
-    background-color: $secondary;
+  &:hover {
+    min-width: 250px;
+    ul {
+      align-items: flex-start;
+      h4 {
+        display: block;
+      }
+    }
+    .active {
+      &:not(:hover) {
+        button,
+        .icon {
+          background-color: $gray-light;
+        }
+      }
+    }
+  }
+
+  .active {
+    .icon {
+      background-color: $secondary;
+    }
   }
 
   ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
     li {
-      width: 170px;
+      // width: 170px;
       margin-bottom: 1rem;
       button {
-        padding: 0.3rem 0.8rem 0.3rem 0;
+        // padding: 0.3rem 0.8rem 0.3rem 0;
         border: none;
         cursor: pointer;
       }
       h4 {
         display: none;
+        text-align: left;
+        padding-left: 5px;
+        margin-bottom: 0;
       }
     }
   }
@@ -587,8 +639,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $primary;
-  border-radius: 50%;
+  // background-color: $primary;
+  border-radius: 15px;
 }
 
 .ghost {
@@ -818,21 +870,18 @@ footer {
   nav {
     ul {
       li {
-        width: 170px;
+        width: 100%;
         margin-bottom: 1rem;
         button {
-          padding: 0.3rem 0.8rem 0.3rem 0;
           text-decoration: none;
           text-align: center;
           text-transform: uppercase;
           background-color: none;
           cursor: pointer;
-          cursor: pointer;
-          border-radius: $border-radius;
+          border-radius: 15px;
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: space-between;
         }
         h4 {
           display: none;
@@ -841,9 +890,6 @@ footer {
           background: $secondary;
           .icon {
             background-color: transparent;
-          }
-          h4 {
-            display: block;
           }
         }
       }
